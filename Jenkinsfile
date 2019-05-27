@@ -39,7 +39,6 @@ pipeline {
       stage ('Deploy') {
 
             steps {
-               sh "ssh root@192.168.1.101 -o StrictHostKeyChecking=no"
                sh "scp target/*.war root@192.168.1.101:/var/lib/tomcat/webapps/"
 
             }
